@@ -1,1 +1,28 @@
-
+services:
+  hyperion_ws_left:
+    image: foorschtbar/hyperion
+    container_name: hyperion_ws_left
+    # privileged: true # for PWM
+    ports:
+      - 8890:8090
+      - 8892:8092
+      - 19400:19400
+      - 19444:19444
+      - 19445:19445
+    volumes:
+      - $dockerdata/hyperion/data/ws_left/config/:/root/.hyperion
+    restart: unless-stopped
+    
+  hyperion_ws_right:
+    image: foorschtbar/hyperion
+    container_name: hyperion_ws_right
+    # privileged: true # for PWM
+    ports:
+      - 8990:8090
+      - 8992:8092
+      - 19500:19400
+      - 19544:19444
+      - 19545:19445
+    volumes:
+      - $dockerdata/hyperion/data/ws_right/config/:/root/.hyperion
+    restart: unless-stopped
