@@ -27,4 +27,3 @@ services:
     volumes:
       - $DOCKER_DATA/hyperion/data/ws_right/config/:/root/.hyperion
     restart: unless-stopped
-    network_mode: "host"
