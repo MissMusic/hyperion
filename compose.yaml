@@ -10,7 +10,7 @@ services:
       - 19444:19444
       - 19445:19445
     volumes:
-      - $dockerdata/hyperion/data/ws_left/config/:/root/.hyperion
+      - $DOCKER_DATA/hyperion/data/ws_left/config/:/root/.hyperion
     restart: unless-stopped
     
   hyperion_ws_right:
@@ -24,5 +24,5 @@ services:
       - 19544:19444
       - 19545:19445
     volumes:
-      - $dockerdata/hyperion/data/ws_right/config/:/root/.hyperion
+      - $DOCKER_DATA/hyperion/data/ws_right/config/:/root/.hyperion
     restart: unless-stopped
