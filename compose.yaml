@@ -12,7 +12,6 @@ services:
     volumes:
       - $DOCKER_DATA/hyperion/data/ws_left/config/:/root/.hyperion
     restart: unless-stopped
-    network_mode: "host"
     
   hyperion_ws_right:
     image: foorschtbar/hyperion
